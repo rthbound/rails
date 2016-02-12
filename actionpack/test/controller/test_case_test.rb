@@ -232,6 +232,17 @@ XML
     assert_equal({"id"=>"1", "controller"=>"test_case_test/test", "action"=>"test_params"}, ::JSON.parse(@response.body))
   end
 
+  def test_document_body_and_params_with_post
+    params = JSON.parse(File.read('payload.json'))
+    post :test_params, params: params
+
+    # If this fails, one of the measures objects is gone
+    assert_equal request.params["data"]["measures"].count, params["data"]["measures"].count
+    # If this fails, one or more of the measure_range_sections objects is gone
+    assert_equal(request.params[:data][:measures].first["data"]["measure_ranges"].first["data"]["measure_range_sections"].count,
+          params[:data][:measures].first["data"]["measure_ranges"].first["data"]["measure_range_sections"].count)
+  end
+
   def test_document_body_with_post
     post :render_body, body: "document body"
     assert_equal "document body", @response.body

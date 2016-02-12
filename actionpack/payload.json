@@ -1,0 +1,336 @@
+{
+  "data": {
+    "attributes": {
+      "enabled": true,
+      "position": 1,
+      "display_label": "My very first dashboard"
+    },
+    "measures": [
+      {
+        "data": {
+          "id": "2",
+          "attributes": {
+            "position": 1,
+            "enabled": true,
+            "unit_of_measure": "mmHg",
+            "name_of_measure": "Blood Pressure Diastolic",
+            "source_of_measure": "BIOMETRIC_WATNO",
+            "result_display_title": "Blood Pressure Diastolic",
+            "result_suffix_label": "mmHg",
+            "link_display_label": "Learn More",
+            "link_target": "https://google.com/",
+            "promotion_config_id": 8675310
+          },
+          "relationships": {
+            "dashboard": {
+              "data": {
+                "type": "dashboard",
+                "id": "2"
+              }
+            }
+          },
+          "measure_ranges": [
+            {
+              "data": {
+                "id": "2",
+                "attributes": {
+                  "gender": "MF"
+                },
+                "measure_range_sections": [
+                  {
+                    "data": {
+                      "id": "6",
+                      "attributes": {
+                        "start": 0,
+                        "end": 80,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "Normal",
+                        "severity": "1"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "2"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "7",
+                      "attributes": {
+                        "start": 80,
+                        "end": 90,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "Prehypertension",
+                        "severity": "2"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "2"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "8",
+                      "attributes": {
+                        "start": 90,
+                        "end": 100,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "High - Stage 1",
+                        "severity": "3"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "2"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "9",
+                      "attributes": {
+                        "start": 100,
+                        "end": 110,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "High - Stage 2",
+                        "severity": "4"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "2"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "10",
+                      "attributes": {
+                        "start": 110,
+                        "end": 160,
+                        "start_condition": "=",
+                        "end_condition": "=",
+                        "display_value": "",
+                        "display_title": "Hypertensive Crisis",
+                        "severity": "5"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "2"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  }
+                ],
+                "relationships": {
+                  "measure": {
+                    "data": {
+                      "type": "measure",
+                      "id": "2"
+                    }
+                  }
+                },
+                "type": "measure_range"
+              }
+            }
+          ],
+          "type": "measure"
+        }
+      },
+      {
+        "data": {
+          "id": "1",
+          "attributes": {
+            "position": 2,
+            "enabled": true,
+            "unit_of_measure": "mmHg",
+            "name_of_measure": "Blood Pressure Systolic",
+            "source_of_measure": "BIOMETRIC_WATNO",
+            "result_display_title": "Blood Pressure Systolic",
+            "result_suffix_label": "mmHg",
+            "link_display_label": "Learn More",
+            "link_target": "https://google.com/",
+            "promotion_config_id": 8675309
+          },
+          "relationships": {
+            "dashboard": {
+              "data": {
+                "type": "dashboard",
+                "id": "2"
+              }
+            }
+          },
+          "measure_ranges": [
+            {
+              "data": {
+                "id": "1",
+                "attributes": {
+                  "gender": "MF"
+                },
+                "measure_range_sections": [
+                  {
+                    "data": {
+                      "id": "1",
+                      "attributes": {
+                        "start": 0,
+                        "end": 120,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "Normal",
+                        "severity": "1"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "1"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "2",
+                      "attributes": {
+                        "start": 120,
+                        "end": 140,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "Prehypertension",
+                        "severity": "2"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "1"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "3",
+                      "attributes": {
+                        "start": 140,
+                        "end": 160,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "High - Stage 1",
+                        "severity": "3"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "1"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "4",
+                      "attributes": {
+                        "start": 160,
+                        "end": 180,
+                        "start_condition": "=",
+                        "end_condition": "<",
+                        "display_value": "",
+                        "display_title": "High - Stage 2",
+                        "severity": "4"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "1"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  },
+                  {
+                    "data": {
+                      "id": "5",
+                      "attributes": {
+                        "start": 180,
+                        "end": 210,
+                        "start_condition": "=",
+                        "end_condition": "=",
+                        "display_value": "",
+                        "display_title": "Hypertensive Crisis",
+                        "severity": "5"
+                      },
+                      "relationships": {
+                        "measure_range": {
+                          "data": {
+                            "type": "measure_range",
+                            "id": "1"
+                          }
+                        }
+                      },
+                      "type": "measure_range_section"
+                    }
+                  }
+                ],
+                "relationships": {
+                  "measure": {
+                    "data": {
+                      "type": "measure",
+                      "id": "1"
+                    }
+                  }
+                },
+                "type": "measure_range"
+              }
+            }
+          ],
+          "type": "measure"
+        }
+      }
+    ],
+    "type": "dashboard"
+  }
+}
