@@ -95,10 +95,10 @@ module ActionDispatch # :nodoc:
         @str_body = nil
       end
 
-      def body
+      def body(should_send = true)
         @str_body ||= begin
                         buf = ''
-                        each { |chunk| buf << chunk }
+                        each(should_send) { |chunk| buf << chunk }
                         buf
                       end
       end
@@ -111,10 +111,10 @@ module ActionDispatch # :nodoc:
         @buf.push string
       end
 
-      def each(&block)
-        @response.sending!
+      def each(should_send = true, &block)
+        @response.sending! if should_send
         x = @buf.each(&block)
-        @response.sent!
+        @response.sent! if should_send
         x
       end
 
@@ -279,8 +279,8 @@ module ActionDispatch # :nodoc:
 
     # Returns the content of the response as a string. This contains the contents
     # of any calls to <tt>render</tt>.
-    def body
-      @stream.body
+    def body(should_send = false)
+      @stream.body(should_send)
     end
 
     def write(string)
@@ -308,7 +308,7 @@ module ActionDispatch # :nodoc:
         @to_path = path
       end
 
-      def body
+      def body(should_send)
         File.binread(to_path)
       end
 
