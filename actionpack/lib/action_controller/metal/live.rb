@@ -163,7 +163,7 @@ module ActionController
         end
       end
 
-      def each
+      def each(should_send = true)
         @response.sending!
         while str = @buf.pop
           yield str

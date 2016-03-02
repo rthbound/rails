@@ -51,7 +51,7 @@ class MimeTypeTest < ActiveSupport::TestCase
     accept = "application/*"
     expect = [Mime[:html], Mime[:js], Mime[:xml], Mime[:rss], Mime[:atom], Mime[:yaml], Mime[:url_encoded_form], Mime[:json], Mime[:pdf], Mime[:zip], Mime[:gzip]]
     parsed = Mime::Type.parse(accept)
-    assert_equal expect, parsed
+    assert_equal parsed | expect, parsed
   end
 
   test "parse without q" do
