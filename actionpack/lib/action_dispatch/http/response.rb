@@ -183,6 +183,12 @@ module ActionDispatch # :nodoc:
       end
     end
 
+    def rewind
+      synchronize { @comitted = false }
+      synchronize { @sending  = false }
+      synchronize { @sent     = false }
+    end
+
     def sending!
       synchronize do
         before_sending
@@ -329,6 +335,7 @@ module ActionDispatch # :nodoc:
     end
 
     def reset_body!
+      @header = @header.dup
       @stream = build_buffer(self, [])
     end
 
