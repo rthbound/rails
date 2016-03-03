@@ -112,9 +112,7 @@ module ActionDispatch # :nodoc:
       end
 
       def each(&block)
-        @response.sending!
         x = @buf.each(&block)
-        @response.sent!
         x
       end
 
