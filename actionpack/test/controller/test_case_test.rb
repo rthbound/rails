@@ -54,6 +54,11 @@ class TestCaseTest < ActionController::TestCase
       render plain: ::JSON.dump(request.query_parameters)
     end
 
+    def test_required_parameters
+      params.require(:foobarbazbang)
+      render plain: ""
+    end
+
     def test_request_parameters
       render plain: request.request_parameters.inspect
     end
@@ -195,6 +200,11 @@ XML
 
     assert_select 'body', 0
     assert_select 'div.foo'
+  end
+
+  def test_missing_required_parameters_is_400
+    get :test_required_parameters
+    assert_equal 400, @response.status
   end
 
   def test_assert_select_with_body
